@@ -24,7 +24,8 @@ export default function Track() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/train/${trainId}`)
+    // http://localhost:3001/train/${trainId}
+    fetch(`https://train-tracker-jyym.onrender.com/train/${trainId}`)
       .then((res) => res.json())
       .then((res) => {
         setData(res);
